@@ -25,6 +25,7 @@ body {
   padding: 0;
   font-family: adobe-caslon-pro, serif;
   font-weight: 800;
+  font-display: swap;
   font-style: normal;
   background: black;
   text-transform: lowercase;
