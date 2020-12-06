@@ -42,8 +42,6 @@ header {
   padding-top: 4rem;
   text-align: center;
   color: white;
-  -webkit-animation: bob 3s infinite  alternate;
-  animation: bob 3s infinite  alternate;
 }
 
 nav {
@@ -94,6 +92,16 @@ h3 {
   font-size: 2rem;
 }
 
+.animated {
+  -webkit-animation: bob 3s infinite  alternate;
+  animation: bob 3s infinite  alternate;
+}
+
+.skip-link {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
 .thought {
   /* margin-bottom: 2rem; */
   min-width: 6rem;
@@ -104,41 +112,39 @@ h3 {
 }
 
 /* Layout */
-main {
-  padding-top: 10rem;
+.content {
+  padding-top: 5rem;
   transform: skewY(10deg);
   min-height: 100ch;
 }
 
-.top {
-  margin: 0 auto;
-  max-width: 60rem/* 60ch */;
-}
-
-.readme {
-  /* width: 100%; */
-  padding: 1rem 6rem 1rem 6rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
-}
-
-.content {
+main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 80rem;
+  width: fit-content;
   margin: 0 auto;
 }
 
+.top {
+  margin: 0 auto;
+  width: fit-content;
+  max-width: 60rem/* 60ch */;
+}
+
+
+.thoughts {
+  border-color: #FF715B;
+}
+
+
 section {
   border: 2rem ridge #1EA896;
-  padding: 1rem;
+  padding: 2rem;
   background: #1d1e23;
   color: white;
   font-size: 1.5rem;
   max-width: 30rem;
-  margin: 2rem 1rem;
-  display: inline-block;
+  margin: 2rem auto;
 }

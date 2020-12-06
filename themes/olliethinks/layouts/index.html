@@ -1,11 +1,14 @@
 {{ partial "head.html" }}
 
 <body>
-    <main>
+    <div class="content">
+        <div class="skip-link"><a href="#main">Skip to content</a></div>
         <div class="top">
-            <header>
-                <h1 id="title">{{ .Site.Title }}</h1>
-            </header>
+            <div class="animated">
+                <header>
+                    <h1 id="title">{{ .Site.Title }}</h1>
+                </header>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#readme">Readme.</a></li>
@@ -13,13 +16,13 @@
                 </ul>
             </nav>
         </div>
-        <div class="content">
+        <main id="main">
             <section class="readme">
-                <h2>Readme.</h2>
+                <h2 id="readme">Readme.</h2>
                 {{.Content}}
             </section>
-            <section class="thoughts"> 
-                <h2>Thoughts.</h2>
+            <section class="thoughts">
+                <h2 id="thoughts">Thoughts.</h2>
                 <ul>
                     {{ range .Site.RegularPages }}
                     <li class="thought">
@@ -29,8 +32,7 @@
                     {{ end }}
                 </ul>
             </section>
-        </div>
-    </main>
+        </main>
+    </div>
 </body>
-
 </html>
