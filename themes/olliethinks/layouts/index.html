@@ -1,23 +1,25 @@
 {{ partial "head.html" }}
 
 <body>
-    <div class="container">
-        <header>
-            <h1 id="title">{{ .Site.Title }}</h1>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="#readme">Readme.</a></li>
-                <li><a href="#thoughts">Thoughts.</a></li>
-            </ul>
-        </nav>
-        <section>
-            <h2 id="readme">Readme.</h2>
-            {{.Content}}
-        </section>
-        <section>
-            <h2 id="thoughts">Thoughts.</h2>
+    <main>
+        <div class="top">
+            <header>
+                <h1 id="title">{{ .Site.Title }}</h1>
+            </header>
             <nav>
+                <ul>
+                    <li><a href="#readme">Readme.</a></li>
+                    <li><a href="#thoughts">Thoughts.</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <section class="readme">
+                <h2>Readme.</h2>
+                {{.Content}}
+            </section>
+            <section class="thoughts"> 
+                <h2>Thoughts.</h2>
                 <ul>
                     {{ range .Site.RegularPages }}
                     <li class="thought">
@@ -26,9 +28,9 @@
                     </li>
                     {{ end }}
                 </ul>
-            </nav>
-        </section>
-    </div>
+            </section>
+        </div>
+    </main>
 </body>
 
 </html>

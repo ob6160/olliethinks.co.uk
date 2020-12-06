@@ -45,6 +45,7 @@ header {
   -webkit-animation: bob 3s infinite  alternate;
   animation: bob 3s infinite  alternate;
 }
+
 nav {
   display: block;
   font-size: 4rem;
@@ -79,14 +80,6 @@ a:focus::after {
   border: 2px dotted white;
   margin: 0px;
 }
-section {
-  border: 2rem ridge #1EA896;
-  margin-top: 2rem;
-  padding: 1rem;
-  background: #1d1e23;
-  color: white;
-  font-size: 1.5rem;
-}
 h1#title {
   font-size: clamp(6rem, 20vw, 10rem);
 }
@@ -100,21 +93,52 @@ h2 {
 h3 {
   font-size: 2rem;
 }
+
 .thought {
-  margin-bottom: 2rem;
-  min-height: 10rem;
-  padding: 2rem;
+  /* margin-bottom: 2rem; */
   min-width: 6rem;
-  text-align: center;
 }
 .flex {
   display: flex;
   justify-content: space-between;
 }
-.container {
-  max-width: 60rem/* 60ch */;
-  min-height: 100ch;
-  margin: 0 auto;
+
+/* Layout */
+main {
   padding-top: 10rem;
   transform: skewY(10deg);
+  min-height: 100ch;
+}
+
+.top {
+  margin: 0 auto;
+  max-width: 60rem/* 60ch */;
+}
+
+.readme {
+  /* width: 100%; */
+  padding: 1rem 6rem 1rem 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+section {
+  border: 2rem ridge #1EA896;
+  padding: 1rem;
+  background: #1d1e23;
+  color: white;
+  font-size: 1.5rem;
+  max-width: 30rem;
+  margin: 2rem 1rem;
+  display: inline-block;
 }
