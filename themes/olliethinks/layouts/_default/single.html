@@ -1,2 +1,20 @@
-Post!
-{{ .Content }}
+{{ partial "head.html" }}
+    <body>
+        <div class="content">
+            <div class="skip-link"><a href="#main">Skip to content</a></div>
+            <div class="top">
+                <nav>
+                    <ul>
+                        <li><h2><a href="/">Back</a></h2></li>
+                    </ul>
+                </nav>
+            </div>
+            <main id="main" class="flex">
+                <section class="post">
+                    <h2>{{.Title}}</h2>
+                    {{.Content}}
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

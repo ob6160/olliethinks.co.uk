@@ -28,6 +28,7 @@ body {
   font-style: normal;
   background: black;
   text-transform: lowercase;
+  word-wrap: break-word;
 }
 h1, h2, h3 {
   margin: 0;
@@ -35,6 +36,7 @@ h1, h2, h3 {
   cursor: default;
   line-height: 0.8;
 }
+
 header {
   border-top: 4rem ridge #1EA896;
   border-bottom: 4rem ridge #1EA896;
@@ -46,7 +48,6 @@ header {
 
 nav {
   display: block;
-  font-size: 4rem;
   margin: 0 auto;
   text-align: center;
 }
@@ -86,6 +87,7 @@ h1 {
 }
 h2 {
   font-size: 4rem;
+  font-size: clamp(2rem, 10vw, 4rem);
   padding: 1rem 0 1rem 0;
 }
 h3 {
@@ -106,9 +108,11 @@ h3 {
   /* margin-bottom: 2rem; */
   min-width: 6rem;
 }
+
 .flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* Layout */
@@ -119,19 +123,15 @@ h3 {
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   max-width: 80rem;
-  width: fit-content;
   margin: 0 auto;
 }
 
 .top {
   margin: 0 auto;
-  width: fit-content;
   max-width: 60rem/* 60ch */;
 }
+
 
 
 .thoughts {
@@ -146,5 +146,6 @@ section {
   color: white;
   font-size: 1.5rem;
   max-width: 30rem;
+  width: 100%;
   margin: 2rem auto;
 }
