@@ -12,14 +12,7 @@
 html {
   scroll-behavior: smooth;
 }
-/**
- * Disable smooth scrolling when users have prefers-reduced-motion enabled
- */
-@media screen and (prefers-reduced-motion: reduce) {
-   html {
-     scroll-behavior: auto;
-   }
-}
+
 body {
   margin: 0;
   padding: 0;
@@ -96,6 +89,20 @@ h3 {
 .animated {
   -webkit-animation: bob 10s infinite  alternate;
   animation: bob 10s infinite  alternate;
+}
+
+/**
+ * Disable smooth scrolling when users have prefers-reduced-motion enabled
+ * Disable title animation also.
+ */
+ @media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animated {
+    -webkit-animation: none;
+    animation: none;
+  }
 }
 
 .skip-link {
