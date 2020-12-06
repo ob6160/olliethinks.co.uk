@@ -1,0 +1,34 @@
+{{ partial "head.html" }}
+
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">{{ .Site.Title }}</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#readme">Readme.</a></li>
+                <li><a href="#thoughts">Thoughts.</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2 id="readme">Readme.</h2>
+            {{.Content}}
+        </section>
+        <section>
+            <h2 id="thoughts">Thoughts.</h2>
+            <nav>
+                <ul>
+                    {{ range .Site.RegularPages }}
+                    <li class="thought">
+                        <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
+                        <p>{{.Description}}</p>
+                    </li>
+                    {{ end }}
+                </ul>
+            </nav>
+        </section>
+    </div>
+</body>
+
+</html>

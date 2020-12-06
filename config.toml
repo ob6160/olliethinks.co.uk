@@ -1,0 +1,4 @@
+baseURL = "https://olliethinks.co.uk"
+languageCode = "en-gb"
+title = "Ollie Thinks!"
+theme = "olliethinks"

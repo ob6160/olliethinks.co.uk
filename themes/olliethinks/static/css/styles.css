@@ -1,0 +1,120 @@
+@-webkit-keyframes bob {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-3rem); }
+}
+@keyframes bob {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-3rem); }
+}
+/**
+ * Enable smooth scrolling on the whole document
+ */
+html {
+  scroll-behavior: smooth;
+}
+/**
+ * Disable smooth scrolling when users have prefers-reduced-motion enabled
+ */
+@media screen and (prefers-reduced-motion: reduce) {
+   html {
+     scroll-behavior: auto;
+   }
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: adobe-caslon-pro, serif;
+  font-weight: 800;
+  font-style: normal;
+  background: black;
+  text-transform: lowercase;
+}
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  line-height: 0.8;
+}
+header {
+  border-top: 4rem ridge #1EA896;
+  border-bottom: 4rem ridge #1EA896;
+  margin-bottom: 2rem;
+  padding-top: 4rem;
+  text-align: center;
+  color: white;
+  -webkit-animation: bob 3s infinite  alternate;
+  animation: bob 3s infinite  alternate;
+}
+nav {
+  display: block;
+  font-size: 4rem;
+  margin: 0 auto;
+  text-align: center;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0 auto;
+}
+nav ul > li {
+  display: inline-block;
+  margin-right: 4rem;
+}
+a {
+  position: relative;
+  text-decoration: underline;
+  color: white;
+}
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #1EA896;
+}
+a:focus::after {
+  content: "";
+  position: absolute;
+  top: calc(-0.25rem);
+  right: calc(-0.25rem);
+  bottom: calc(-0.25rem);
+  left: calc(-0.25rem);
+  border-radius: 3px;
+  border: 2px dotted white;
+  margin: 0px;
+}
+section {
+  border: 2rem ridge #1EA896;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #1d1e23;
+  color: white;
+  font-size: 1.5rem;
+}
+h1#title {
+  font-size: clamp(6rem, 20vw, 10rem);
+}
+h1 {
+  font-size: 6rem;
+}
+h2 {
+  font-size: 4rem;
+  padding: 1rem 0 1rem 0;
+}
+h3 {
+  font-size: 2rem;
+}
+.thought {
+  margin-bottom: 2rem;
+  min-height: 10rem;
+  padding: 2rem;
+  min-width: 6rem;
+  text-align: center;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.container {
+  max-width: 60rem/* 60ch */;
+  min-height: 100ch;
+  margin: 0 auto;
+  padding-top: 10rem;
+  transform: skewY(10deg);
+}
