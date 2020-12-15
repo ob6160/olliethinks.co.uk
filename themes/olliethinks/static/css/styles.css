@@ -1,10 +1,10 @@
 @-webkit-keyframes bob {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-3rem); }
+    0% { transform: translateY(1.5rem); }
+    100% { transform: translateY(-1.5rem); }
 }
 @keyframes bob {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-3rem); }
+    0% { transform: translateY(1.5rem); }
+    100% { transform: translateY(-1.5rem); }
 }
 /**
  * Enable smooth scrolling on the whole document
@@ -14,13 +14,12 @@ html {
 }
 
 body {
+  background: white;
   margin: 0;
   padding: 0;
   font-family: adobe-caslon-pro, serif;
-  font-weight: 800;
   font-display: swap;
   font-style: normal;
-  background: black;
   text-transform: lowercase;
   word-wrap: break-word;
 }
@@ -29,14 +28,19 @@ h1, h2, h3 {
   padding: 0;
   cursor: default;
   line-height: 0.8;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 header {
+  background: white;
   border-top: 4rem ridge #1EA896;
   border-bottom: 4rem ridge #1EA896;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   padding-top: 4rem;
   text-align: center;
-  color: white;
+  color: black;
+  transform: skewY(10deg);
+  box-shadow: 1rem 1rem #888888;
 }
 nav {
   display: block;
@@ -54,11 +58,12 @@ nav ul > li {
 a {
   position: relative;
   text-decoration: underline;
-  color: white;
+  color: black;
+  text-decoration-color: #1EA896;
 }
 a:hover {
   text-decoration: underline;
-  text-decoration-color: #1EA896;
+  text-decoration-color: black;
 }
 a:focus::after {
   content: "";
@@ -68,7 +73,7 @@ a:focus::after {
   bottom: calc(-0.25rem);
   left: calc(-0.25rem);
   border-radius: 3px;
-  border: 2px dotted white;
+  border: 2px dotted black;
   margin: 0px;
 }
 h1#title {
@@ -113,20 +118,25 @@ h3 {
 
 /* Layout */
 .content {
+  background: #f2eecb;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 5rem;
-  transform: skewY(10deg);
   min-height: 100ch;
 }
 main {
   max-width: 80rem;
   margin: 0 auto;
+  padding: 1rem;
 }
 .top {
   margin: 0 auto;
-  max-width: 60rem/* 60ch */;
+}
+.readme {
+  border-color: #715BFF;
 }
 .thoughts {
-  border-color: #FF715B;
+  border-color: #5BFF71;
 }
 .thought {
   /* margin-bottom: 2rem; */
@@ -140,10 +150,14 @@ main {
 section {
   border: 2rem ridge #1EA896;
   padding: 2rem;
-  background: #1d1e23;
-  color: white;
+  background: white;
+  color: black;
   font-size: 1.5rem;
   max-width: 30rem;
   width: 100%;
   margin: 2rem auto;
+  box-shadow: 1rem 1rem #888888;
+}
+section h2 {
+  border-bottom: .5rem black dashed;
 }
