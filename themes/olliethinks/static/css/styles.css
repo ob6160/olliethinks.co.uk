@@ -1,10 +1,18 @@
 @-webkit-keyframes bob {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-3rem); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-3rem);
+  }
 }
 @keyframes bob {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-3rem); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-3rem);
+  }
 }
 /**
  * Enable smooth scrolling on the whole document
@@ -24,15 +32,22 @@ body {
   text-transform: lowercase;
   word-wrap: break-word;
 }
-h1, h2, h3 {
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0;
   cursor: default;
-  line-height: 0.8;
+  line-height: 1.2;
 }
 header {
-  border-top: 4rem ridge #1EA896;
-  border-bottom: 4rem ridge #1EA896;
+  border-top: 4rem ridge #1ea896;
+  border-bottom: 4rem ridge #1ea896;
   margin-bottom: 2rem;
   padding-top: 4rem;
   text-align: center;
@@ -58,7 +73,7 @@ a {
 }
 a:hover {
   text-decoration: underline;
-  text-decoration-color: #1EA896;
+  text-decoration-color: #1ea896;
 }
 a:focus::after {
   content: "";
@@ -87,15 +102,15 @@ h3 {
 }
 
 .animated {
-  -webkit-animation: bob 10s infinite  alternate;
-  animation: bob 10s infinite  alternate;
+  -webkit-animation: bob 10s infinite alternate;
+  animation: bob 10s infinite alternate;
 }
 
 /**
  * Disable smooth scrolling when users have prefers-reduced-motion enabled
  * Disable title animation also.
  */
- @media screen and (prefers-reduced-motion: reduce) {
+@media screen and (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
@@ -110,11 +125,10 @@ h3 {
   margin-bottom: 4rem;
 }
 
-
 /* Layout */
 .content {
   padding-top: 5rem;
-  transform: skewY(10deg);
+  /* transform: skewY(10deg); */
   min-height: 100ch;
 }
 main {
@@ -123,10 +137,10 @@ main {
 }
 .top {
   margin: 0 auto;
-  max-width: 60rem/* 60ch */;
+  max-width: 60rem /* 60ch */;
 }
 .thoughts {
-  border-color: #FF715B;
+  border-color: #ff715b;
 }
 .thought {
   /* margin-bottom: 2rem; */
@@ -138,7 +152,7 @@ main {
   flex-wrap: wrap;
 }
 section {
-  border: 2rem ridge #1EA896;
+  border: 2rem ridge #1ea896;
   padding: 2rem;
   background: #1d1e23;
   color: white;
