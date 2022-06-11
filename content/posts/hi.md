@@ -6,4 +6,3 @@ draft: true
 ---
 
 Hello world
-

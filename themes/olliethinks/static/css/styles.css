@@ -75,16 +75,8 @@ a:hover {
   text-decoration: underline;
   text-decoration-color: #1ea896;
 }
-a:focus::after {
-  content: "";
-  position: absolute;
-  top: calc(-0.25rem);
-  right: calc(-0.25rem);
-  bottom: calc(-0.25rem);
-  left: calc(-0.25rem);
-  border-radius: 3px;
-  border: 2px dotted white;
-  margin: 0px;
+a:focus {
+  outline: 3px solid #fd0;
 }
 h1#title {
   font-size: clamp(6rem, 20vw, 10rem);
