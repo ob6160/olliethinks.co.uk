@@ -8,5 +8,5 @@ I am a 24 year old software developer.
 
 My interests include:
 - front-end [development](//github.com/ob6160)
-- exploring different [types of music](//last.fm/user/pythonisbad).
+- exploring different [types of music](//last.fm/user/olliethinks).
 - I also [tweet about my life](//twitter.com/olliethinks)
