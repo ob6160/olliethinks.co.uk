@@ -1,155 +1,184 @@
-@-webkit-keyframes bob {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-3rem);
-  }
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-@keyframes bob {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-3rem);
-  }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
-/**
- * Enable smooth scrolling on the whole document
- */
-html {
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
   scroll-behavior: smooth;
 }
 
+/* Set core body defaults */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: adobe-caslon-pro, serif;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* @link https://utopia.fyi/type/calculator?c=320,21,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+:root {
+  --black: #000000ff;
+  --oxford-blue: #14213dff;
+  --orange-web: #fca311ff;
+  --platinum: #e5e5e5ff;
+  --white: #ffffffff;
+  --purple: #4f39fa;
+  --pink: #da62c4;
+  --dark-pink: #bf2da4;
+  --green: #2f855a;
+  --red: #c53030;
+  --emphasis-gradient: linear-gradient(300deg, var(--pink), var(--purple));
+
+  --s-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
+  --s-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
+  --s-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
+  --s-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
+  --s-1: clamp(0.8rem, 0.84rem + -0.18vw, 0.71rem);
+  --s0: clamp(1rem, 1rem + 0vw, 1rem);
+  --s1: clamp(1.25rem, 1.19rem + 0.32vw, 1.41rem);
+  --s2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
+  --s3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
+  --s4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
+  --s5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
+
+  --source-serif-pro: "Source Serif Pro", sans-serif;
+
+  --color-text: hsl(12, 5%, 4%);
+  --color-bg: hsl(10, 21%, 95%);
+  --color-border: hsl(17, 24%, 90%);
+}
+
+body {
+  font-family: var(--source-serif-pro);
+  font-size: var(--s0);
+  color: var(--color-text);
+  background-color: var(--color-bg);
   font-weight: 800;
   font-display: swap;
   font-style: normal;
-  background: black;
   text-transform: lowercase;
   word-wrap: break-word;
 }
 
-p {
-  margin: 0;
+h1 {
+  font-size: var(--s5);
 }
 
-h1,
-h2,
+h2 {
+  font-size: var(--s3);
+}
+
 h3 {
+  font-size: var(--s2);
+}
+
+i {
+  vertical-align: middle;
+}
+
+main {
+  margin: auto;
+  padding: var(--s0);
+  font-size: var(--s1);
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid black;
+}
+
+a:focus-visible {
+  outline: 4px solid black;
+}
+
+a:hover {
+  border-bottom: 4px solid black;
+  margin-bottom: -3px;
+}
+
+hr {
+  border: 0;
+  border-top: 4px solid black;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  max-width: 60ch;
+}
+
+.text-gradient {
+  font-weight: 900;
+  color: var(--green);
+}
+
+ul.links {
+  list-style: none;
   margin: 0;
   padding: 0;
-  cursor: default;
-  line-height: 1.2;
-}
-header {
-  border-top: 4rem ridge #1ea896;
-  border-bottom: 4rem ridge #1ea896;
-  margin-bottom: 2rem;
-  padding-top: 4rem;
-  text-align: center;
-  color: white;
-}
-nav {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-}
-nav ul {
-  list-style-type: none;
-  margin: 0 auto;
-}
-nav ul > li {
-  display: inline-block;
-  margin-right: 4rem;
-}
-a {
-  position: relative;
-  text-decoration: underline;
-  color: white;
-}
-a:hover {
-  text-decoration: underline;
-  text-decoration-color: #1ea896;
-}
-a:focus {
-  outline: 3px solid #fd0;
-}
-h1#title {
-  font-size: clamp(6rem, 20vw, 10rem);
-}
-h1 {
-  font-size: 6rem;
-}
-h2 {
-  font-size: 4rem;
-  font-size: clamp(2rem, 10vw, 4rem);
-  padding: 1rem 0 1rem 0;
-}
-h3 {
-  font-size: 2rem;
-}
-
-.animated {
-  -webkit-animation: bob 10s infinite alternate;
-  animation: bob 10s infinite alternate;
-}
-
-/**
- * Disable smooth scrolling when users have prefers-reduced-motion enabled
- * Disable title animation also.
- */
-@media screen and (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  .animated {
-    -webkit-animation: none;
-    animation: none;
-  }
-}
-
-.skip-link {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-/* Layout */
-.content {
-  padding-top: 5rem;
-  /* transform: skewY(10deg); */
-  min-height: 100ch;
-}
-main {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-.top {
-  margin: 0 auto;
-  max-width: 60rem /* 60ch */;
-}
-.thoughts {
-  border-color: #ff715b;
-}
-.thought {
-  /* margin-bottom: 2rem; */
-  min-width: 6rem;
-}
-.flex {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-section {
-  border: 2rem ridge #1ea896;
-  padding: 2rem;
-  background: #1d1e23;
-  color: white;
-  font-size: 1.5rem;
-  max-width: 30rem;
-  width: 100%;
-  margin: 2rem auto;
+  gap: var(--s-1);
+  font-size: var(--s3);
 }
