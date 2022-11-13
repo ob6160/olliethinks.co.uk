@@ -165,8 +165,13 @@ hr {
 
 header {
   display: flex;
-  flex-direction: column;
-  max-width: 60ch;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: var(--s2);
+}
+
+nav {
+  align-self: center;
 }
 
 .text-gradient {
