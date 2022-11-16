@@ -137,14 +137,14 @@ i {
 
 header {
   display: flex;
-  /* justify-content: space-between; */
+  gap: var(--s-2);
   flex-wrap: wrap;
   align-items: baseline;
-  /* max-width: 60ch; */
 }
 
 nav {
   flex-grow: 1;
+  font-size: var(--s2);
 }
 
 nav > ul {
