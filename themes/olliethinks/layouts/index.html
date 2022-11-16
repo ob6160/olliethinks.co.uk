@@ -7,19 +7,22 @@
             <h1 aria-label="{{ .Site.Title }}">ollie<span class="text-gradient">thinks</span></h1>
         </a>
         <nav>
+            <p>[</p>
             <ul class="links">
                 <li>
                     <a href="/">thoughts</a>
                 </li>
+                <li>,</li>
                 <li>
                     <a href="/">links</a>
                 </li>
             </ul>
+            <p>]</p>
         </nav>
     </header>
-    <main>
-        <section class="readme">
-            <h2 id="readme">About.</h2>
+    <main id="main">
+        <section class="about">
+            <h2 id="about">About.</h2>
             {{.Content}}
         </section>
         <section class="thoughts">
