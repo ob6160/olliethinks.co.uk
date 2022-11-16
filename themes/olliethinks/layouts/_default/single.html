@@ -1,20 +1,26 @@
 {{ partial "header.html" . }}
-    <body>
-        <div class="content">
-            <div class="skip-link"><a href="#main">Skip to content</a></div>
-            <div class="top">
-                <nav>
-                    <ul>
-                        <li><h2><a href="/">Back</a></h2></li>
-                    </ul>
-                </nav>
-            </div>
-            <main id="main" class="flex">
-                <section class="post">
-                    <h2>{{.Title}}</h2>
-                    {{.Content}}
-                </section>
-            </main>
-        </div>
-    </body>
+
+<body>
+    <div class="skip-link"><a href="#main">Skip to content</a></div>
+    <header>
+        <a class="logo" href="/">
+            <h1 aria-label="{{ .Site.Title }}">ollie<span class="text-gradient">thinks</span></h1>
+        </a>
+        <nav>
+            <ul class="links">
+                <li>
+                    <a href="/">back</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <main id="main" class="flex">
+        <section class="post">
+            <h2>{{.Title}}</h2>
+            {{.Content}}
+        </section>
+    </main>
+</body>
+
 </html>

@@ -1,37 +1,39 @@
 {{ partial "header.html" . }}
-    <body>
-        <div class="content">
-            <div class="skip-link"><a href="#main">Skip to content</a></div>
-            <div class="top">
-                <div class="animated">
-                    <header>
-                        <h1 id="title">{{ .Site.Title }}</h1>
-                    </header>
-                </div>
-                <nav>
-                    <ul>
-                        <li><h2><a href="#readme">Readme.</a></h2></li>
-                        <li><h2><a href="#thoughts">Thoughts.</a></h2></li>
-                    </ul>
-                </nav>
-            </div>
-            <main id="main" class="flex">
-                <section class="readme">
-                    <h2 id="readme">Readme.</h2>
-                    {{.Content}}
-                </section>
-                <section class="thoughts">
-                    <h2 id="thoughts">Thoughts.</h2>
-                    <ul>
-                        {{ range .Site.RegularPages }}
-                        <li class="thought">
-                            <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
-                            <p>{{.Description}}</p>
-                        </li>
-                        {{ end }}
-                    </ul>
-                </section>
-            </main>
-        </div>
-    </body>
+
+<body>
+    <div class="skip-link"><a href="#main">Skip to content</a></div>
+    <header>
+        <a class="logo" href="/">
+            <h1 aria-label="{{ .Site.Title }}">ollie<span class="text-gradient">thinks</span></h1>
+        </a>
+        <nav>
+            <ul class="links">
+                <li>
+                    <a href="/">thoughts</a>
+                </li>
+                <li>
+                    <a href="/">links</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="readme">
+            <h2 id="readme">About.</h2>
+            {{.Content}}
+        </section>
+        <section class="thoughts">
+            <h2 id="thoughts">Thoughts.</h2>
+            <ul>
+                {{ range .Site.RegularPages }}
+                <li class="thought">
+                    <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
+                    <p>{{.Description}}</p>
+                </li>
+                {{ end }}
+            </ul>
+        </section>
+    </main>
+</body>
+
 </html>
