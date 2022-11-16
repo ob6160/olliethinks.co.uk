@@ -167,7 +167,7 @@ nav > p {
 
 main {
   min-height: 100%;
-  gap: 2rem;
+  margin-top: var(--s2);
 }
 
 main > section {
@@ -179,7 +179,7 @@ a {
   color: inherit;
   text-decoration-thickness: 1px;
   text-decoration-skip-ink: none;
-  text-underline-offset: 0.3em;
+  text-underline-offset: 0.5rem;
   text-decoration-color: var(--emphasis-gradient);
 }
 
