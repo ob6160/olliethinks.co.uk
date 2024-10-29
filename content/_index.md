@@ -4,7 +4,7 @@ date: 2020-12-06T15:13:37Z
 draft: false
 ---
 
-I am a 25 year old software developer.
+I'm a software developer, currently working at the Financial Times!
 
 My interests include:
 - front-end [development](//github.com/ob6160)
